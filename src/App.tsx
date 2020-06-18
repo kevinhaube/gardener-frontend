@@ -1,11 +1,13 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid, ThemeProvider } from "@material-ui/core";
+import { NavBar } from "./components/AppBar/NavBar";
+import { GardenerTheme } from "./theme/theme";
 
 function App() {
   return (
-    <div>
-      <Typography variant="h1">Test</Typography>
-    </div>
+    <ThemeProvider theme={GardenerTheme}>
+      <NavBar />
+    </ThemeProvider>
   );
 }
 
