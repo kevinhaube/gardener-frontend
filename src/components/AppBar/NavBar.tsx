@@ -1,9 +1,32 @@
 import * as React from "react";
-import { AppBar, Toolbar, IconButton } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  MenuItem,
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import MailIcon from "@material-ui/icons/Mail";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import MoreIcon from "@material-ui/icons/MoreVert";
 import { useStyles } from "./styles";
 
 interface Props {}
+
+const ActionButtons = () => {
+  return (
+    <div style={{ marginLeft: "auto" }}>
+      <div>
+        <IconButton>
+          <AccountCircle />
+        </IconButton>
+      </div>
+    </div>
+  );
+};
 
 const NavBar = (props: Props) => {
   const classes = useStyles();
@@ -15,6 +38,8 @@ const NavBar = (props: Props) => {
           <IconButton className={classes.menuButton} color="inherit">
             <MenuIcon />
           </IconButton>
+          <Typography variant="h6">Gardener</Typography>
+          <ActionButtons />
         </Toolbar>
       </AppBar>
     </div>
